@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(238, 231, 231, 0.738);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cards{
+  width: 20%;
+  height: 450px;
+  /* height: 500px; */
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 150px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  font-size: 1.5rem;
+  transition: all 400ms ease;
+  animation: scale-up-top 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.cards:hover{
+  width: 22%;
+  height: 460px;
+  box-shadow: 10px 10px 5px 0px rgba(183, 15, 43, 0.941);
+  /* box-shadow: none; */
+}
+
+.card{
+  /* width: 21.5%; */
+  /* float: right; */
+}
+
+.card img{
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.title{
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  color: rgb(221, 27, 16);
+  font-weight: 600;
+}
+
+.btn-watch{
+  background-color: rgba(255, 0, 0, 0.722);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 1.2rem;
+  margin-left: 31%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.btn-watch:hover{
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.75);
+}
+.netflix{
+  color: gray;
+}
+.nav{
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  color: gray;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 80px;
+  margin-top: 0px;
+  font-weight: 100;
+}
+
