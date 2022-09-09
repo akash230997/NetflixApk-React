@@ -1,72 +1,58 @@
 import React from 'react';
+import Amazon from './Amazon';
 // import ReactDOM from 'react-dom';
-import Card from './Card';
-import Data from './data';
+// import Card from './Card';
+// import Data from './data';
+import Netflix from './Netfflix';
 
-const functionA = currValue=> <Card imglink={currValue.imglink} Name = {currValue.Name}  Link = {currValue.Link} Netflix = {currValue.Netflix} />
+
+
+// const functionA = (currValue, index) =>  <Card imglink={currValue.imglink} Name={currValue.Name} Link={currValue.Link} Netflix={currValue.Netflix} /> 
+// const functionA = (currValue, index) =>{
+//   return(
+//     <Card key={currValue.id}
+//     imglink={currValue.imglink}
+//     Name={currValue.Name}
+//     Link={currValue.Link}
+//     Netflix={currValue.Netflix}/>
+//   )
+// } 
 
 // function functionA(currVal){
 //   return (
 //     <Card
+//       key = {currVal.id}
 //       imglink={currVal.imglink}
 //       Name={currVal.Name}
 //       Link={currVal.Link}
 //       Netflix={currVal.Netflix} />
 //   )
 // }
+// const favS = 'Amazon';
 
 
-function App(props){
-  return(
-    <>
-      <h1 className="nav">LIST OF TOP NETFLIX SERIES IN 2022</h1>
-      {Data.map(functionA)};
-      {/* <Card 
-        imglink={Data[0].imglink}
-        Name={Data[0].Name} 
-        Link={Data[0].Link}
-        Netflix={Data[0].Netflix}/> */}
-
-      {/* <Card 
-        imglink={Data[1].imglink}
-        Name={Data[1].Name}
-        Link={Data[1].Link}
-        Netflix={Data[1].Netflix}/>
-
-
-      <Card imglink={Data[2].imglink}
-        Name={Data[2].Name}
-        Link={Data[2].Link}
-        Netflix={Data[2].Netflix} />
-
-
-      <Card imglink={Data[3].imglink}
-        Name={Data[3].Name}
-        Link={Data[3].Link}
-        Netflix={Data[3].Netflix} />
-
-
-      <Card imglink={Data[4].imglink}
-        Name={Data[4].Name}
-        Link={Data[4].Link}
-        Netflix={Data[4].Netflix} />
-
-
-      <Card imglink={Data[5].imglink}
-        Name={Data[5].Name}
-        Link={Data[5].Link}
-        Netflix={Data[5].Netflix} />
-
-
-      <Card imglink={Data[6].imglink}
-        Name={Data[6].Name}
-        Link={Data[6].Link}
-        Netflix={Data[6].Netflix} /> */}
-    </>
-  )
-    
+function Option(){
+  // prompt("")
+  const favS = "Please Choose Netflix || Amazon ";
+  if (prompt(favS) ==='Netflix'){
+    return <Netflix />
+  } else if (prompt(favS) === 'Amazon'){
+    return <Amazon />
+  } else {
+    prompt("That's not right, try again");
+  }
 }
 
 
 
+function App(){
+  return(
+    <>
+      {/* {option('netfflix')} */}
+      <h1 className="nav">LIST OF TOP NETFLIX SERIES IN 2022</h1>
+      <Option />
+      {/* {(favS === 'netflix')? <Netflix /> : <Amazon />} */}
+    </>
+  )
+}
 export default App;

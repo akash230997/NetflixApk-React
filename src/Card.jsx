@@ -1,5 +1,7 @@
 import React from "react";
 import './index.css'
+import Heading from "./Heading";
+import Img from "./Images";
 
 
 function Card(props) {
@@ -8,10 +10,10 @@ function Card(props) {
             <div className="cards">
                 <div className="card">
                     <div className="cardd">
-                        <img src={props.imglink} alt="img1" />
+                        <Img imglink={props.imglink}/>
                     </div>
                     <div className="netflix" style={{textAlign:'center'}}>A Orignal Netflix Show</div>
-                    <div className="title">{props.Name}</div>
+                    <Heading Name={props.Name} />
                     <a href={props.Link}><button type="button" className="btn-watch">Watch Now</button></a>
                 </div>
             </div>
